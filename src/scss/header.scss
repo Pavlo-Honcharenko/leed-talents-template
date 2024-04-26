@@ -1,13 +1,28 @@
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 	background-color: $petrolColor;
+	z-index: 50;
+	&::after {
+		content:'';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $petrolColor;
+		z-index: 45;
+	}
 		// .header__container
 		&__container {
-			@include adaptiveValue("padding-top", 25, 10);
-			@include adaptiveValue("padding-bottom", 25, 10);
+			@include adaptiveValue("padding-top", 22, 10);
+			@include adaptiveValue("padding-bottom", 22, 10);
 		}
 		// .header__logo
 		&__logo {
-			
+			z-index: 50;
 			img {
 				@include adaptiveValue("width", 350, 120);
 			}
@@ -36,7 +51,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	@include adaptiveValue("font-size", 48, 20);
+	@include adaptiveValue("font-size", 54, 24, 2, 1920, 992);
 	color: #FFF;
 	white-space: nowrap;
 
@@ -52,18 +67,53 @@
 	position: relative;
 	@include adaptiveValue("margin-right", 60, 30);
 	padding: 10px 0;
+	z-index: 50;
 }
 .current-menu-item {
 }
-.sub-menu {
+.sub-menu-wrapper {
 	position: absolute;
 	top: 100%;
 	left: 0;
-	width: 100%;
+	overflow: hidden;
+}
+.sub-menu {
+	position: relative;
+	top: 100%;
+	left: 0;
+	width: max-content;
+   padding: 5px 40px 20px;
+	@include adaptiveValue("padding-right", 45, 20, 2, 1920, 992);
+	@include adaptiveValue("padding-left", 45, 20, 2, 1920, 992);
 	white-space: wrap;
 	background-color: $petrolColor;
 }
 .sub-menu-item {
+	z-index: -1;
+	margin-top: -100%;
+	opacity: 0;
+	transition: all 0.5s ease 0s; 
+
+	a {
+		@media (any-hover: hover) {
+			&:hover {
+				color: $redColor;
+			}
+			&:active {
+				color: $redColor;
+			}
+		}
+	}
+}
+.menu-item {
+	@media (any-hover: hover) {
+		&:hover {
+			.sub-menu-item {
+				opacity: 1;
+				margin-top: 0;
+			}
+		}
+	}
 }
 .select-language {
 	display: flex;
@@ -71,8 +121,16 @@
 	justify-content: center;
 	align-items: center;
 	gap: 15px;
-	@include adaptiveValue("font-size", 48, 20);
+	@include adaptiveValue("font-size", 54, 24, 2, 1920, 992);
 	color: #FFF;
+
+	a {
+		display: none;
+	}
+
+	a.active {
+			display: block;
+		}
 
 	@media (max-width:$tablet){
 		margin-left: 50px;

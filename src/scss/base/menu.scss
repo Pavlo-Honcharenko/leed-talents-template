@@ -4,7 +4,7 @@
 	}
 	// .menu__body
 	&__body {
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet) {
 			position: fixed;
 			width: 100%;
 			height: 100%;
@@ -33,7 +33,7 @@
 	}
 	// .menu__list
 	&__list {
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet) {
 		}
 	}
 	// .menu__item
@@ -41,7 +41,7 @@
 	}
 	// .menu__link
 	&__link {
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet) {
 		}
 	}
 }
@@ -49,7 +49,7 @@
 //Burger Icon
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		display: block;
 		position: relative;
 		width: toRem(30);
