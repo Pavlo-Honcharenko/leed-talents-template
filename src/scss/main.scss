@@ -1,0 +1,70 @@
+.header-indent {
+	display: block;
+	width: 100%;
+	@include adaptiveValue("height", 160, 60);
+}
+
+.main {
+	position: relative;
+
+	img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 85vh; 
+		width: 100%;
+		object-fit: cover;
+
+		@media (max-width:$tablet){
+			height: 60vh;
+		}
+	}
+	// .main__container
+	&__container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		height: 85vh; 
+		@include adaptiveValue("padding-top", 150, 100);
+		@include adaptiveValue("padding-bottom", 80, 50);
+		
+		@media (max-width:$tablet){
+			height: 60vh;
+		}
+	}
+	// .main__title
+	&__title {
+		min-height: 30vh;
+		@include adaptiveValue("font-size", 72, 26);
+		color: $redColor;
+		text-shadow: 2px 2px white;
+
+		span {
+			font-weight: bold;
+			letter-spacing: -1.2px;
+		}
+
+		@media (max-width:$tablet){
+			min-height: 20vh;
+		}
+
+		@media (max-width:$mobile){
+			text-shadow: 1px 1px white; 
+		}
+	}
+}
+
+.main__container.main-text {
+	position: relative;
+	display: block;
+	height: initial;
+	@include adaptiveValue("font-size", 72, 22);
+	font-weight: bold;
+	line-height: math.div(115 , 96);
+	@include adaptiveValue("padding-top", 140, 50);
+	@include adaptiveValue("padding-bottom", 140, 50);
+}
+
+
+

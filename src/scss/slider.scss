@@ -1,0 +1,124 @@
+.slider-section {
+		// .slider-section__container
+		&__container {
+			padding-top: 50px;
+			padding-bottom: 50px;
+			@include adaptiveValue("padding-top", 100, 50, 2, 1920, 768);
+			@include adaptiveValue("padding-bottom", 70, 50, 2, 1920, 768);
+		}
+		// .slider-section__slider
+		&__slider {
+			position: relative;
+		}
+		// .slider-section__wrapper
+		&__wrapper {}
+		// .slider-section__slide
+		&__slide {}
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+	width: 100%;
+	display: flex;
+	@media (max-width:$mobile){
+		display: block; 
+	}
+		// .swiper-slide__photo
+		&__photo {
+			flex: 0 1 33.333%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 30px;
+			.image-wrapper {
+				margin-left: 30px;
+				width: 70%;
+				border: 1px solid #000;
+				border-radius: 50%;
+				overflow: hidden;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				img {
+					width: 100%;
+				}
+
+				@media (max-width:$mobile){
+					margin: auto; 
+					width: 260px;
+				}
+			}
+		}
+		// .swiper-slide__content
+		&__content {
+			flex: 0 1 65%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding-right: 30px;
+			@media (max-width:$mobile){
+				padding: 0 30px; 
+			}
+		}
+		// .swiper-slide__title
+		&__title {
+			@include adaptiveValue("font-size", 72, 26);
+			font-weight: bold;
+			@media (max-width:$mobile){
+				 text-align: center; 
+			}
+		}
+		// .swiper-slide__description
+		&__description {
+			@include adaptiveValue("font-size", 40, 19);
+			@media (max-width:$mobile){
+				 text-align: center; 
+			}
+		}
+		// .swiper-slide__text
+		&__text {
+			@include adaptiveValue("padding-top", 40, 15);
+			@include adaptiveValue("font-size", 60, 22);
+			@media (max-width:$mobile){
+				 text-align: center; 
+			}
+		}
+}
+.swiper-button-prev, .swiper-button-next {
+	height: 100%;
+	width: 50px;
+	position: absolute;
+	bottom: 0;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@media (max-width:$mobile){
+		width: 30px;
+	}
+
+	img {
+		transition: transform 0.3s ease 0s; 
+		@media (max-width:$mobile){
+			width: 20px; 
+		}
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			img {
+				transform: scale(1.2);
+			}
+		}
+	}
+}
+.swiper-button-prev {
+	left: 0;
+}
+.swiper-button-next {
+	right: 0;
+}

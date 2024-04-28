@@ -1,7 +1,5 @@
-// Заголовки, загальні БЕМ блоки та інше...
-.content-wrapper {
-	@include adaptiveValue("padding-top", 160, 50);
-	@include adaptiveValue("padding-right", 85, 0);
-	@include adaptiveValue("padding-bottom", 70, 50);
-	@include adaptiveValue("padding-left", 85, 0);
+p {
+	&:not(:last-child) {
+		margin-bottom: 10px;
+	}
 }

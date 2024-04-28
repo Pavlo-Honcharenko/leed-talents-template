@@ -24,11 +24,11 @@ $fontSize: toRem(16); // де 14(px) - розмір шрифту за замов
 $mainColor: #000; // Колір шрифту за замовчуванням
 $petrolColor: #10545d;
 $redColor: #ad452a;
+$redLinkColor: #e6263f;
 $greenColor: #7b8429;
 $greyColor: #353535;
 
 // $cupperColor: #ad452a;
-// $redColor: #e6263f;
 
 // Палітра кольорів
 // @import "base/colors-palette";
@@ -97,6 +97,9 @@ body {
 		min-width: 0;
 	}
 }
+* {
+  outline: none;
+}
 // Обмежуючий контейнер ======================================================================================================================================================================================================================
 
 // (i) Стилі будуть застосовуватись до
@@ -158,4 +161,8 @@ body {
 @import "footer";
 
 // Підключення стилів окремих сторінок
-@import "home";
+@import "main";
+@import "text-image";
+@import "red-section";
+@import "advantages";
+@import "slider";
