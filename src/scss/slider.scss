@@ -5,6 +5,10 @@
 			padding-bottom: 50px;
 			@include adaptiveValue("padding-top", 100, 50, 2, 1920, 768);
 			@include adaptiveValue("padding-bottom", 70, 50, 2, 1920, 768);
+
+			@media (max-width:$mobileSmall){
+				 padding: 20px 5px 30px; 
+			}
 		}
 		// .slider-section__slider
 		&__slider {
@@ -49,6 +53,9 @@
 				@media (max-width:$mobile){
 					margin: auto; 
 					width: 260px;
+				}
+				@media (max-width:$mobileSmall){
+					width: 180px;
 				}
 			}
 		}

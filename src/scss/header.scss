@@ -113,12 +113,15 @@
 	}
 }
 .current-menu-item {
-	color: $redLinkColor;
+	color: $redLinkColor !important;
 	@media (any-hover: hover) {
 		&:hover {
 			color: $redLinkColor;
 			text-shadow: 0px 0px #e6264000;
 		}
+	}
+	a {
+		color: $redLinkColor !important;
 	}
 }
 .sub-menu-wrapper {

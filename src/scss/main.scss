@@ -39,6 +39,9 @@
 		@include adaptiveValue("font-size", 72, 26);
 		color: $redColor;
 		text-shadow: 2px 2px white;
+		opacity: 0;
+		transform: scale(0.95);
+		animation: fadeIn 1.5s ease-in forwards 0.5s;
 
 		span {
 			font-weight: bold;
@@ -53,6 +56,21 @@
 			text-shadow: 1px 1px white; 
 		}
 	}
+	
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+	 transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+	 transform: scale(1);
+  }
+}
+.loaded .main__title {
+	opacity: 1;
+	transform: translate(0, 0);
 }
 
 .main__container.main-text {
