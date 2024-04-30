@@ -18,7 +18,7 @@
 		background-color: $redColor;
 		padding-top: 50px;
 		@include adaptiveValue("padding-top", 70, 50, 2, 1920, 768);
-		padding-bottom: 30px;
+		padding-bottom: 55px;
 		border-bottom: 1px solid #fff;
 		padding-left: 15px;
 		padding-right: 15px;
@@ -26,7 +26,7 @@
 
 		@media (max-width:$mobileSmall){
 			padding-top: 40px;
-			padding-bottom: 20px;
+			padding-bottom: 30px;
 		}
 		&::after {
 			content:'';
@@ -516,3 +516,160 @@
 	}
 }
 
+.big-text {
+	@include adaptiveValue("font-size", 72, 22);
+	font-weight: bold;
+	padding: 50px 0;
+	text-align: center;
+}
+
+.big-green-button {
+	margin: 20px 0;
+	width: 100%;
+	background-color: $greenColor;
+	@include adaptiveValue("padding", 30, 15);
+	border-radius: 12px;
+	@include adaptiveValue("font-size", 72, 18);
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	transition: all 0.3s ease 0s; 
+
+	div {
+		max-width: 74%;
+		margin: 0 auto;
+		@media (max-width:$mobile){
+			max-width: 90%; 
+		}
+		@media (max-width:$mobileSmall){
+			 max-width: 100%; 
+		}
+	}
+	
+
+	@media (any-hover: hover) {
+		&:hover {
+			transform: translate(0, -3px);
+		}
+	}
+}
+
+.red-button {
+	margin: 20px auto;
+	max-width: 600px;
+	background-color: $redColor;
+	@include adaptiveValue("padding", 30, 15);
+	border-radius: 12px;
+	@include adaptiveValue("font-size", 48, 18);
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease 0s; 
+
+	@media (max-width:$mobileSmall){
+		width: 100%; 
+	}
+
+	div {
+		margin: 0 auto;
+		
+	}
+	
+
+	@media (any-hover: hover) {
+		&:hover {
+			transform: translate(0, -3px);
+		}
+	}
+}
+
+.grey-section {
+	background-color: $petrolColor;
+}
+.text-section.grey-section {
+	color: #fff;
+}
+
+
+
+
+
+
+//=======================================================================================================
+
+.text-section {
+		// .text-section__container
+		&__container {
+			@include adaptiveValue("padding-top", 70, 30);
+			@include adaptiveValue("padding-bottom", 70, 40);
+		}
+		// .text-section__title
+		&__title {
+			@include adaptiveValue("font-size", 72, 18);
+			font-weight: bold;
+			margin-bottom: 30px;
+		}
+
+		p {
+			@include adaptiveValue("font-size", 40, 16);
+			&:not(:last-child) {
+				margin-bottom: 25px;
+				@media (max-width:$mobile){
+					 margin-bottom: 15px; 
+				}
+			}
+
+			span {
+				font-weight: bold;
+			}
+		}
+}
+
+.text-image.without-padding-top {
+	padding: 0 0 24px 0;
+	.section-background {
+		top: 0;
+		left: 0;
+		height: calc(100% - 24px);
+	}
+}
+.text-image.without-padding-bottom {
+	padding: 24px 0 0 0;
+	.section-background {
+		height: calc(100% - 24px);
+	}
+}
+
+
+
+
+
+//=======================================================================================================
+
+.video {
+		// .video__container
+		&__container {
+			@include adaptiveValue("padding-top", 70, 30);
+			@include adaptiveValue("padding-bottom", 70, 40);
+		}
+		// .video__title
+		&__title {
+			@include adaptiveValue("font-size", 72, 18);
+			font-weight: bold;
+			margin-bottom: 30px;
+		}
+		video {
+			width: 100%;
+			height: 40vw;
+		}
+}
+
+.red-text {
+	color: $redColor;
+}
+.center-text {
+	text-align: center;
+}

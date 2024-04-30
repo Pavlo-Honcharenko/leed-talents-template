@@ -120,9 +120,6 @@
 			text-shadow: 0px 0px #e6264000;
 		}
 	}
-	a {
-		color: $redLinkColor !important;
-	}
 }
 .sub-menu-wrapper {
 	position: absolute;
@@ -178,6 +175,9 @@
 			}
 		}
 	}
+}
+.sub-menu-item.current-menu-item a {
+	color: $redLinkColor;
 }
 .menu-item {
 	@media (any-hover: hover) {
