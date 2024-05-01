@@ -8,14 +8,14 @@
 		&__container {
 			padding-left: 15px;
 			padding-right: 15px;
-			@include adaptiveValue("padding-top", 18, 8);
-			@include adaptiveValue("padding-bottom", 18, 8);
+			@include adaptiveValue("padding-top", 13, 8);
+			@include adaptiveValue("padding-bottom", 13, 8);
 		}
 		// .header__logo
 		&__logo {
 			z-index: 70;
 			img {
-				@include adaptiveValue("width", 350, 120);
+				@include adaptiveValue("width", 310, 120);
 				transition: all 0.3s ease 0s; 
 				@media (any-hover: hover) {
 					&:hover {
@@ -109,7 +109,7 @@
 }
 .menu-item {
 	position: relative;
-	@include adaptiveValue("margin-right", 50, 30, 2, 1710, 992);
+	@include adaptiveValue("margin-right", 50, 35, 2, 1710, 992);
 	padding: 10px 0;
 	@media (any-hover: hover) {
 		&:hover {
@@ -150,7 +150,7 @@
 	top: 100%;
 	left: 0;
 	width: max-content;
-   padding: 5px 40px 20px;
+   padding: 5px 40px 15px;
 	@include adaptiveValue("padding-right", 45, 20, 2, 1710, 992);
 	@include adaptiveValue("padding-left", 45, 20, 2, 1710, 992);
 	white-space: wrap;

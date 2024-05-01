@@ -46,8 +46,8 @@
 		padding-top: 40px;
 		padding-bottom: 40px;
 		@include adaptiveValue("padding-top", 60, 40, 2, 1710, 768);
-		@include adaptiveValue("padding-left", 40, 10);
-		@include adaptiveValue("padding-right", 40, 10);
+		@include adaptiveValue("padding-left", 40, 20);
+		@include adaptiveValue("padding-right", 40, 20);
 		@include adaptiveValue("padding-bottom", 60, 40, 2, 1710, 768);
 		@media (max-width:$mobileSmall){
 			padding-top: 30px;

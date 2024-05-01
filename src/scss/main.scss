@@ -1,7 +1,7 @@
 .header-indent {
 	display: block;
 	width: 100%;
-	@include adaptiveValue("height", 155, 55);
+	@include adaptiveValue("height", 135, 45);
 }
 
 .main {
