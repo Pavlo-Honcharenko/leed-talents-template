@@ -10,46 +10,48 @@
 		&__container {
 			background-color: $redColor;
 			color: #fff;
-			padding-top: 50px;
-			padding-bottom: 50px;
-			@include adaptiveValue("padding-top", 100, 50, 2, 1920, 768);
-			@include adaptiveValue("padding-bottom", 70, 50, 2, 1920, 768);
+			padding-top: 40px;
+			padding-bottom: 40px;
+			@include adaptiveValue("padding-top", 60, 40, 2, 1710, 768);
+			@include adaptiveValue("padding-bottom", 60, 40, 2, 1710, 768);
 		}
 		// .red-section__title
 		&__title {
 			opacity: 0.77;
 			transform: translate(0, 10px);
-			@include adaptiveValue("font-size", 69, 26);
+			@include adaptiveValue("font-size", 49, 26);
 			font-weight: bold;
 			line-height: math.div(115 , 96);
-			padding-bottom: 30px;
-			@include adaptiveValue("padding-left", 70, 10);
-			@include adaptiveValue("padding-right", 70, 10);
+			padding-bottom: 25px;
+			@include adaptiveValue("padding-left", 40, 10);
+			@include adaptiveValue("padding-right", 40, 10);
 			
 			@media (max-width:$mobileSmall){
 				padding-bottom: 20px;
 			}
 		}
+
 		// .red-section__description
 		&__description {
 			opacity: 0.77;
 			transform: translate(0, 10px);
-			@include adaptiveValue("font-size", 43, 20);
+			@include adaptiveValue("font-size", 35, 22);
 			font-weight: bold;
-			@include adaptiveValue("padding-left", 70, 10);
-			@include adaptiveValue("padding-right", 70, 10);
+			@include adaptiveValue("padding-left", 40, 10);
+			@include adaptiveValue("padding-right", 40, 10);
 
 			@media (max-width:$mobileSmall){
 				 padding-bottom: 15px; 
 			}
 		}
+		
 		// .red-section__row
 		&__row {
 			@include adaptiveValue("padding-top", 70, 20);
 			display: flex;
-			@include adaptiveValue("gap", 40, 15, 2, 1920, 992);
-			@include adaptiveValue("padding-left", 70, 10);
-			@include adaptiveValue("padding-right", 70, 10);
+			@include adaptiveValue("gap", 40, 15, 2, 1710, 992);
+			@include adaptiveValue("padding-left", 40, 10);
+			@include adaptiveValue("padding-right", 40, 10);
 
 			@media (max-width: 1400){
 				gap: 25px;
@@ -79,21 +81,24 @@
 				} 
 			}
 		}
-		// .red-section__number
-		&__number {
+		// .red-section__icon
+		&__icon {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			border-radius: 50%;
-			border: 1px solid #fff;
-			@include adaptiveValue("width", 140, 60);
-			@include adaptiveValue("height", 140, 60);
-			@include adaptiveValue("margin-bottom", 60, 25);
-			@include adaptiveValue("font-size", 69, 30);
-			line-height: 1;
+			@include adaptiveValue("width", 100, 60);
+			@include adaptiveValue("height", 100, 60);
+			@include adaptiveValue("margin-bottom", 40, 25);
+			@include adaptiveValue("font-size", 49, 30);
 			padding-bottom: 10px;
 			@media (max-width:$mobile){
 				padding-bottom: 5px; 
+			}
+
+			img {
+				// height: 100%;
+				width: 100%;
+				object-fit: cover;
 			}
 		}
 		// .red-section__subtitle
@@ -101,26 +106,28 @@
 			opacity: 0.77;
 			transform: translate(0, 10px);
 			width: 100%;
-			@include adaptiveValue("font-size", 42, 20);
+			font-size: 20px;
+			@include adaptiveValue("font-size", 35, 20);
 			font-weight: bold;
-			@include adaptiveValue("min-height", 130, 100, 2, 1920, 992);
-			@media (max-width:$tablet){
-				margin-bottom: 10px;
-			}
+			min-height: 50px;
+			@include adaptiveValue("min-height", 105, 85, 2, 1710, 992);
 		}
 		// .red-section__text
 		&__text {
 			opacity: 0.77;
 			transform: translate(0, 10px);
 			width: 100%;
-			@include adaptiveValue("font-size", 43, 16);
+			@include adaptiveValue("font-size", 29, 16);
 			line-height: 1.25;
 		}
 		a {
 			opacity: 0.77;
 			transform: translate(0, 10px);
-			@include adaptiveValue("font-size", 43, 16);
+			@include adaptiveValue("font-size", 35, 16);
 			font-weight: bold;
 			text-decoration: underline;
 		}
+}
+.grey-section .red-section__container {
+	background-color: $petrolColor;
 }

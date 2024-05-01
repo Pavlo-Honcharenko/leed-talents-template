@@ -1,13 +1,16 @@
 .slider-section {
-	width: 100vw;
-	max-width: calc(100vw - 40px);
+	width: 100%;
+	@media (min-width:$mobile){
+		width: calc(100vw - 60px); 
+	}
+	width: calc(100vw - 20px);
 
 		// .slider-section__container
 		&__container {
-			padding-top: 50px;
-			padding-bottom: 50px;
-			@include adaptiveValue("padding-top", 100, 50, 2, 1920, 768);
-			@include adaptiveValue("padding-bottom", 70, 50, 2, 1920, 768);
+			padding-top: 40px;
+			padding-bottom: 40px;
+			@include adaptiveValue("padding-top", 60, 40, 2, 1710, 768);
+			@include adaptiveValue("padding-bottom", 60, 40, 2, 1710, 768);
 
 			@media (max-width:$mobileSmall){
 				 padding: 20px 5px 30px; 
@@ -43,7 +46,6 @@
 			.image-wrapper {
 				margin-left: 30px;
 				width: 70%;
-				border: 1px solid #000;
 				border-radius: 50%;
 				overflow: hidden;
 				display: flex;
@@ -56,7 +58,7 @@
 
 				@media (max-width:$mobile){
 					margin: auto; 
-					width: 260px;
+					width: 240px;
 				}
 				@media (max-width:$mobileSmall){
 					width: 180px;
@@ -76,7 +78,7 @@
 		}
 		// .swiper-slide__title
 		&__title {
-			@include adaptiveValue("font-size", 69, 26);
+			@include adaptiveValue("font-size", 49, 26);
 			font-weight: bold;
 			@media (max-width:$mobile){
 				 text-align: center; 
@@ -92,7 +94,7 @@
 		// .swiper-slide__text
 		&__text {
 			@include adaptiveValue("padding-top", 40, 15);
-			@include adaptiveValue("font-size", 60, 22);
+			@include adaptiveValue("font-size", 52, 22);
 			@media (max-width:$mobile){
 				 text-align: center; 
 			}
@@ -180,7 +182,7 @@
 		}
 		// .slide__subtitle
 		&__subtitle {
-			@include adaptiveValue("font-size", 43, 16);
+			@include adaptiveValue("font-size", 35, 16);
 			font-weight: bold;
 			margin-bottom: 20px;
 			padding-left: 30px;
@@ -188,7 +190,7 @@
 		}
 		// .slide__text
 		&__text {
-			@include adaptiveValue("font-size", 43, 16);
+			@include adaptiveValue("font-size", 35, 16);
 			padding-bottom: 10px;
 			padding-left: 30px;
 				 padding-right: 30px; 

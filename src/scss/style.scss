@@ -38,9 +38,9 @@ $greyColor: #353535;
 // Мінімальна ширина сторінки
 $minWidth: 320;
 // Ширина полотна (макету)
-$maxWidth: 1920;
+$maxWidth: 1710;
 // Ширина обмежуючого контейнера (0 = немає обмеження)
-$maxWidthContainer: 1890;
+$maxWidthContainer: 0;
 // Загальний відступ у контейнера
 // (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
 $containerPadding: 20;
@@ -103,20 +103,20 @@ body {
 }
 .page {
 	background-color: #fff;
-	padding: 0 20px;
-	max-width: 1930px;
+	max-width: 1710px;
 	margin: 0 auto;
-	@media (max-width:$mobile){
-		padding: 0 10px;
+	@media (min-width:$mobile){
+		padding: 0 30px;
 	}
+	padding: 0 10px;
 }
 .header_wrapper, .footer-wrapper {
-	padding: 0 20px;
-	max-width: 1930px;
+	max-width: 1710px;
 	margin: 0 auto;
-	@media (max-width:$mobile){
-		padding: 0 10px;
+	@media (min-width:$mobile){
+		padding: 0 30px;
 	}
+	padding: 0 10px;
 }
 // Обмежуючий контейнер ======================================================================================================================================================================================================================
 
