@@ -1,4 +1,7 @@
 .slider-section {
+	width: 100vw;
+	max-width: calc(100vw - 40px);
+
 		// .slider-section__container
 		&__container {
 			padding-top: 50px;
@@ -12,6 +15,7 @@
 		}
 		// .slider-section__slider
 		&__slider {
+			width: 100%;
 			position: relative;
 		}
 		// .slider-section__wrapper
@@ -72,7 +76,7 @@
 		}
 		// .swiper-slide__title
 		&__title {
-			@include adaptiveValue("font-size", 72, 26);
+			@include adaptiveValue("font-size", 69, 26);
 			font-weight: bold;
 			@media (max-width:$mobile){
 				 text-align: center; 
@@ -80,7 +84,7 @@
 		}
 		// .swiper-slide__description
 		&__description {
-			@include adaptiveValue("font-size", 40, 19);
+			@include adaptiveValue("font-size", 37, 19);
 			@media (max-width:$mobile){
 				 text-align: center; 
 			}
@@ -124,10 +128,10 @@
 	}
 }
 .swiper-button-prev {
-	left: 0;
+	left: -2px;
 }
 .swiper-button-next {
-	right: 0;
+	right: -2px;
 }
 
 
@@ -171,28 +175,22 @@
 			@include adaptiveValue("font-size", 70, 22);
 			font-weight: bold;
 			margin-bottom: 30px;
-			@media (max-width:$mobile){
-				 padding-left: 30px;
+			padding-left: 30px;
 				 padding-right: 30px; 
-			}
 		}
 		// .slide__subtitle
 		&__subtitle {
-			@include adaptiveValue("font-size", 48, 16);
+			@include adaptiveValue("font-size", 43, 16);
 			font-weight: bold;
 			margin-bottom: 20px;
-			@media (max-width:$mobile){
-				 padding-left: 30px;
+			padding-left: 30px;
 				 padding-right: 30px; 
-			}
 		}
 		// .slide__text
 		&__text {
-			@include adaptiveValue("font-size", 48, 16);
+			@include adaptiveValue("font-size", 43, 16);
 			padding-bottom: 10px;
-			@media (max-width:$mobile){
-				 padding-left: 30px;
+			padding-left: 30px;
 				 padding-right: 30px; 
-			}
 		}
 }

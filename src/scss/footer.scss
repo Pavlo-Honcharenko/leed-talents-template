@@ -1,17 +1,22 @@
 .footer {
 	margin-top: 24px;
-	background-color: $greyColor;
 	color: #fff;
+
+	.footer-wrapper {
+		background-color: $greyColor;
+	}
 
 	@media (max-width:$mobileSmall){
 		margin-top: 10px;
 	}
 		// .footer__container
 		&__container {
+			padding-left: 15px;
+			padding-right: 15px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			@include adaptiveValue("font-size", 48, 20);
+			@include adaptiveValue("font-size", 43, 20);
 			padding-top: 50px;
 			padding-bottom: 50px;
 			@include adaptiveValue("padding-top", 70, 50, 2, 1920, 768);

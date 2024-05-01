@@ -6,6 +6,7 @@
 	position: relative;
 		// .text-image__container
 		&__container {
+			padding: 0;
 			@media (max-width:$mobile){
 				background-color: $petrolColor; 
 			}
@@ -28,7 +29,6 @@
 		flex: 0 0 50%;
 
 		img {
-			display: none;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
@@ -42,7 +42,9 @@
 		padding-top: 50px;
 		padding-bottom: 50px;
 		@include adaptiveValue("padding-top", 100, 50, 2, 1920, 768);
-		@include adaptiveValue("padding-right", 80, 15, 2, 1920, 768);
+		// @include adaptiveValue("padding-right", 80, 15, 2, 1920, 768);
+		@include adaptiveValue("padding-left", 70, 10);
+		@include adaptiveValue("padding-right", 70, 10);
 		@include adaptiveValue("padding-bottom", 70, 50, 2, 1920, 768);
 		@media (max-width:$mobileSmall){
 			padding-top: 30px;
@@ -61,7 +63,7 @@
 		&__text {
 			opacity: 0.77;
 			transform: translate(0, 10px);
-			@include adaptiveValue("font-size", 48, 16);
+			@include adaptiveValue("font-size", 43, 16);
 		}
 		// .col-text__link
 		&__link {
@@ -69,7 +71,7 @@
 			transform: translate(0, 10px);
 			padding-top: 20px;
 			a {
-				@include adaptiveValue("font-size", 48, 16);
+				@include adaptiveValue("font-size", 43, 16);
 				font-weight: bold;
 				text-decoration: underline;
 			}
@@ -87,41 +89,40 @@
 	}
 }
 
-.section-background {
-	position: absolute;
-	top: 24px;
-	left: 0;
-	height: calc(100% - 48px);
-	width: 100%;
-	display: flex;
-	width: 100%;
-	display: flex;
-	justify-content: flex-end;
-	z-index: -1;
+// .section-background {
+// 	position: absolute;
+// 	top: 24px;
+// 	left: 0;
+// 	height: calc(100% - 48px);
+// 	width: 100%;
+// 	display: flex;
+// 	width: 100%;
+// 	display: flex;
+// 	justify-content: flex-end;
 
-	img {
-		width: 50%;
-		flex: 0 0 50%;
-		width: 50vw;
-		flex: 0 0 50vw;
-		height: 100%;
-		object-fit: cover;
+// 	img {
+// 		width: 50%;
+// 		flex: 0 0 50%;
+// 		width: 50vw;
+// 		flex: 0 0 50vw;
+// 		height: 100%;
+// 		object-fit: cover;
 
-		@media (max-width:$mobile){
-			 width: 100%;
-			 width: 100vw; 
-		}
-	}
+// 		@media (max-width:$mobile){
+// 			 width: 100%;
+// 			 width: 100vw; 
+// 		}
+// 	}
 
-	@media (max-width:$mobile){
-		position: relative;
-		top: initial;
-		left: initial;
-		height: initial;
-		display: block;
-		z-index: 0;
-	}
-}
+// 	@media (max-width:$mobile){
+// 		position: relative;
+// 		top: initial;
+// 		left: initial;
+// 		height: initial;
+// 		display: block;
+// 		z-index: 0;
+// 	}
+// }
 
 .text-image.image-text {
 	.section-background {
@@ -136,18 +137,13 @@
 
 
 .green {
-	padding: 24px 0;
+	padding: 24px;
 	position: relative;
+	background-color: $greenColor;
+		color: #fff;
 
 	@media (max-width:$mobileSmall){
 		padding: 10px 0;
-	}
-
-	.section-background {
-		position: relative;
-		top: initial;
-		background-color: $greenColor;
-		color: #fff;
 	}
 		// .green__container
 		&__container {
@@ -160,7 +156,7 @@
 		&__title {
 			opacity: 0.77;
 			transform: translate(0, 10px);
-			@include adaptiveValue("font-size", 72, 24);
+			@include adaptiveValue("font-size", 69, 24);
 			font-weight: bold;
 			text-align: center;
 			padding-bottom: 5px;
@@ -169,7 +165,7 @@
 		&__description {
 			opacity: 0.77;
 			transform: translate(0, 10px);
-			@include adaptiveValue("font-size", 48, 20);
+			@include adaptiveValue("font-size", 43, 20);
 			font-weight: bold;
 			text-align: center;
 		}

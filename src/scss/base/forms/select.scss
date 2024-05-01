@@ -24,14 +24,14 @@
 		align-items: center;
 		height: toRem(30);
 		padding: 0 toRem(15);
-		gap: toRem(10);
+		gap: 8px;
 		> * {
 			flex: 1 1 auto;
 		}
 		&:after {
 			content: "";
 			align-self: stretch;
-			flex: 0 0 25px;
+			flex: 0 0 22px;
 			transition: all 0.3s ease 0s;
 			display: flex;
 			justify-content: center;
@@ -39,10 +39,6 @@
 			background: url('@img/chevron-down-white.svg') center center / 100% no-repeat;
 			._select-open & {
 				transform: rotate(-180deg);
-			}
-
-			@media (max-width: 1400px){
-				flex: 0 0 22px;
 			}
 			@media (max-width: 1200px){
 				flex: 0 0 16px;
@@ -122,6 +118,10 @@
 		cursor: pointer;
 		padding: 5px 15px;
 		color: inherit;
+
+		@media (min-width:$tablet){
+			margin-top: -5px;
+		}
 		&._select-selected {
 			// background-color: #eee;
 		}

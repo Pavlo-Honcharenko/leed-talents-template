@@ -3,26 +3,17 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: $petrolColor;
 	z-index: 50;
-	// &::after {
-	// 	content:'';
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	background-color: $petrolColor;
-	// 	z-index: 45;
-	// }
 		// .header__container
 		&__container {
-			@include adaptiveValue("padding-top", 22, 10);
-			@include adaptiveValue("padding-bottom", 22, 10);
+			padding-left: 15px;
+			padding-right: 15px;
+			@include adaptiveValue("padding-top", 18, 8);
+			@include adaptiveValue("padding-bottom", 18, 8);
 		}
 		// .header__logo
 		&__logo {
-			z-index: 50;
+			z-index: 70;
 			img {
 				@include adaptiveValue("width", 350, 120);
 				transition: all 0.3s ease 0s; 
@@ -39,6 +30,10 @@
 		align-items: center;
 		gap: 60px;
 	}
+}
+
+.header_wrapper {
+	background-color: $petrolColor;
 }
 
 .menu-header {
@@ -66,11 +61,26 @@
 				overflow: auto;
 			}
 		}
+	&::before {
+		content:'';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $petrolColor;
+		@media (max-width:$tablet){
+			z-index: 60;
+		}
+	}
 }
 .menu-open .menu-header__body {
 	left: 0;
 }
 .icon-menu {
+	@media (max-width:$tablet){
+		z-index: 70;
+	}
 }
 .nav-menu {
 	display: flex;
@@ -78,7 +88,7 @@
 	align-items: center;
 	flex-wrap: wrap;
 	font-size: 24px;
-	@include adaptiveValue("font-size", 48, 24, 2, 1920, 992);
+	@include adaptiveValue("font-size", 43, 24, 2, 1920, 992);
 	letter-spacing: -1px;
 	color: #FFF;
 	white-space: nowrap;
@@ -110,6 +120,7 @@
 	@media (max-width:$tablet){
 		width: 100%;
 		text-align: left;
+		padding: 6px 0;
 	}
 }
 .current-menu-item {
@@ -158,7 +169,7 @@
 
 	@media (max-width:$tablet){
 		position: relative;
-		padding: 10px 0 0 15px;
+		padding: 10px 0 0 20px;
 		opacity: 1;
 		margin-top: 0;
 		z-index: 50;
@@ -191,13 +202,50 @@
 }
 .select-language {
 	margin-left: -15px;
-	@include adaptiveValue("font-size", 48, 24, 2, 1920, 992);
+	margin-right: 10px;
+	font-size: 24px;
+	@include adaptiveValue("font-size", 43, 24, 2, 1920, 992);
 	letter-spacing: -1px;
 	color: #FFF;
+	z-index: 70;
 
 	@media (max-width:$tablet){
 		margin-right: 25px;
 		order: 1;
 	}
 
+}
+
+.has-children > a {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.has-children > a:after {
+			content: "";
+			margin-top: 5px;
+			align-self: stretch;
+			flex: 0 0 16px;
+			transition: all 0.3s ease 0s;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: url('@img/chevron-down-white.svg') center center / 100% no-repeat;
+			@media (max-width:$tablet){
+				display: none;
+			}
+}
+.has-children {
+	@media (any-hover: hover) {
+		&:hover {
+			> a {
+				&::after {
+					content:'';
+					transform: rotate(-180deg);
+				}
+			}
+		}
+	}
+	
 }

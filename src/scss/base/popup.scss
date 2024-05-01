@@ -73,7 +73,7 @@ body::after {
 	}
 
 	h2 {
-		@include adaptiveValue("font-size", 40, 18);
+		@include adaptiveValue("font-size", 37, 18);
 		font-weight: bold;
 		margin-bottom: 30px;
 	}

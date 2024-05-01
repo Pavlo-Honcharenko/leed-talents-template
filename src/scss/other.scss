@@ -4,14 +4,14 @@
 
 .red-grey {
 	color: #fff;
-	@include adaptiveValue("font-size", 40, 16);
+	@include adaptiveValue("font-size", 37, 16);
 	// .red-grey__container
 	&__container {
 		padding: 0;
-		background-color: #fff;
-		display: flex;
-		flex-direction: column;
-		gap: 1px;
+		// background-color: #fff;
+		// display: flex;
+		// flex-direction: column;
+		// gap: 1px;
 	}
 	// .red-grey__red
 	&__red {
@@ -19,7 +19,7 @@
 		padding-top: 50px;
 		@include adaptiveValue("padding-top", 70, 50, 2, 1920, 768);
 		padding-bottom: 55px;
-		border-bottom: 1px solid #fff;
+		// border-bottom: 1px solid #fff;
 		padding-left: 15px;
 		padding-right: 15px;
 		position: relative;
@@ -28,122 +28,49 @@
 			padding-top: 40px;
 			padding-bottom: 30px;
 		}
-		&::after {
-			content:'';
-			position: absolute;
-			top: 0px;
-			height: calc(100%);
-			left: -50vw;
-			width: 200vw;
-			background-color: $redColor;
-			z-index: -1;
-		}
+		
 	}
 	// .red-grey__title
 	&__title {
 		opacity: 0.77;
 			transform: translate(0, 10px);
-		@include adaptiveValue("font-size", 72, 24);
+		@include adaptiveValue("font-size", 69, 24);
 		font-weight: bold;
 		padding-bottom: 10px;
+		@include adaptiveValue("padding-left", 70, 10);
+		@include adaptiveValue("padding-right", 70, 10);
 	}
 	// .red-grey__text
 	&__text {
 		opacity: 0.77;
 			transform: translate(0, 10px);
-		@include adaptiveValue("font-size", 40, 18);
+		@include adaptiveValue("font-size", 37, 18);
+		@include adaptiveValue("padding-left", 70, 10);
+		@include adaptiveValue("padding-right", 70, 10);
 	}
 	// .red-grey__row
 	&__row {
+		background-color: #fff;
 		display: flex;
 		min-height: 20vw;
-		border-top: 1px solid #fff;
-		border-top: 1px solid #fff;
-		gap: 2px;
+		gap: 15px;
+		margin-top: 15px;
 	}
 	// .red-grey__grey
 	&__grey {
 		flex: 0 0 50%;
-		background-color: $greyColor;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 20px 15px;
-		position: relative;
 	}
 	// .red-grey__petrol
 	&__petrol {
 		flex: 0 0 50%;
-		background-color: $petrolColor;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 20px 15px;
-		position: relative;
-	}
-	// .red-grey__big-text
-	&__big-text {
-		@include adaptiveValue("font-size", 72, 24);
-		font-weight: bold;
-	}
-}
-
-.red-grey__row-1 {
-	.red-grey__grey {
-		padding-right: 30px;
-		position: relative;
-		&::after {
-			content:'';
-			position: absolute;
-			top: 0;
-			right: 100%;
-			height: 100%;
-			width: 50vw;
-			background-color: $greyColor;
-		}
-	}
-	.red-grey__petrol {
-		padding-left: 30px;
-		position: relative;
-		&::after {
-			content:'';
-			position: absolute;
-			top: 0;
-			left: 100%;
-			height: 100%;
-			width: 50vw;
-			background-color: $petrolColor;
-		}
-	}
-}
-.red-grey__row-2 {
-	.red-grey__petrol {
-		padding-right: 30px;
-		position: relative;
-		&::after {
-			content:'';
-			position: absolute;
-			top: 0px;
-			right: 100%;
-			height: 100%;
-			width: 50vw;
-			background-color: $petrolColor;
-		}
-	}
-	.red-grey__grey {
-		padding-left: 30px;
-		position: relative;
-		&::after {
-			content:'';
-			position: absolute;
-			top: 0px;
-			left: 100%;
-			height: 100%;
-			width: 50vw;
-			background-color: $greyColor;
-		}
 	}
 }
 
@@ -172,18 +99,22 @@
 		&__title {
 			opacity: 0.77;
 			transform: translate(0, 10px);
-			@include adaptiveValue("font-size", 72, 24);
+			@include adaptiveValue("font-size", 69, 24);
 			font-weight: bold;
 			color: #fff;
 			padding-bottom: 30px;
+			@include adaptiveValue("padding-left", 70, 10);
+			@include adaptiveValue("padding-right", 70, 10);
 		}
 		// .our-process__description
 		&__description {
 			opacity: 0.77;
 			transform: translate(0, 10px);
-			@include adaptiveValue("font-size", 48, 18);
+			@include adaptiveValue("font-size", 43, 18);
 			color: #fff;
 			padding-bottom: 30px;
+			@include adaptiveValue("padding-left", 70, 10);
+			@include adaptiveValue("padding-right", 70, 10);
 		}
 		// .our-process__cards
 		&__cards {
@@ -210,7 +141,7 @@
 			align-items: center;
 			border: 1px solid rgba(0, 0, 0, 0);
 			border-radius: 50%;
-			@include adaptiveValue("font-size", 72, 28);
+			@include adaptiveValue("font-size", 69, 28);
 			font-weight: bold;
 			color: #fff;
 			width: 100px;
@@ -231,12 +162,12 @@
 		}
 		// .our-process__big-text
 		&__big-text {
-			@include adaptiveValue("font-size", 72, 24);
+			@include adaptiveValue("font-size", 69, 24);
 			font-weight: bold;
 		}
 		// .our-process__text
 		&__text {
-			@include adaptiveValue("font-size", 48, 18);
+			@include adaptiveValue("font-size", 43, 18);
 		}
 		// .our-process__bitton
 		&__button {
@@ -302,7 +233,7 @@
 		&__title {
 			opacity: 0.77;
 			transform: translate(0, 10px);
-			@include adaptiveValue("font-size", 72, 24);
+			@include adaptiveValue("font-size", 69, 24);
 			font-weight: bold;
 			padding-bottom: 30px;
 		}
@@ -310,7 +241,7 @@
 		&__description {
 			opacity: 0.77;
 			transform: translate(0, 10px);
-			@include adaptiveValue("font-size", 48, 18);
+			@include adaptiveValue("font-size", 43, 18);
 			font-weight: bold;
 			padding-bottom: 30px;
 		}
@@ -355,13 +286,13 @@
 		&__content {}
 		// .fact__title
 		&__title {
-			@include adaptiveValue("font-size", 48, 18);
+			@include adaptiveValue("font-size", 43, 18);
 			font-weight: bold;
 			margin-bottom: 10px;
 		}
 		// .fact__text
 		&__text {
-			@include adaptiveValue("font-size", 48, 16);
+			@include adaptiveValue("font-size", 43, 16);
 		}
 }
 
@@ -400,7 +331,7 @@
 		}
 		// .three-cards__title
 		&__title {
-			@include adaptiveValue("font-size", 48, 18);
+			@include adaptiveValue("font-size", 43, 18);
 			letter-spacing: -1px;
 			text-align: center;
 			color: #fff;
@@ -417,12 +348,12 @@
 		}
 		// .three-cards__subtitle
 		&__subtitle {
-			@include adaptiveValue("font-size", 48, 18);
+			@include adaptiveValue("font-size", 43, 18);
 			color: #fff;
 		}
 		// .three-cards__text
 		&__text {
-			@include adaptiveValue("font-size", 48, 18);
+			@include adaptiveValue("font-size", 43, 18);
 			color: #fff;
 			padding-bottom: 40px;
 			@media (max-width:$mobileSmall){
@@ -458,7 +389,7 @@
 		}
 		// .prices__title
 		&__title {
-			@include adaptiveValue("font-size", 72, 22);
+			@include adaptiveValue("font-size", 69, 22);
 			font-weight: bold;
 			margin-bottom: 40px;
 		}
@@ -491,12 +422,12 @@
 	}
 		// .service__title
 		&__title {
-			@include adaptiveValue("font-size", 48, 18);
+			@include adaptiveValue("font-size", 43, 18);
 			font-weight: bold;
 		}
 		// .service__text
 		&__text {
-			@include adaptiveValue("font-size", 48, 18);
+			@include adaptiveValue("font-size", 43, 18);
 		}
 }
 
@@ -508,7 +439,7 @@
 	justify-content: center;
 	align-items: center;
 	flex: 0 1 30%;
-	@include adaptiveValue("font-size", 48, 18);
+	@include adaptiveValue("font-size", 43, 18);
 
 	@media (max-width:$mobile){
 		padding: 20px 10px 24px;
@@ -517,7 +448,7 @@
 }
 
 .big-text {
-	@include adaptiveValue("font-size", 72, 22);
+	@include adaptiveValue("font-size", 69, 22);
 	font-weight: bold;
 	padding: 50px 0;
 	text-align: center;
@@ -529,7 +460,7 @@
 	background-color: $greenColor;
 	@include adaptiveValue("padding", 30, 15);
 	border-radius: 12px;
-	@include adaptiveValue("font-size", 72, 18);
+	@include adaptiveValue("font-size", 69, 18);
 	font-weight: bold;
 	color: #fff;
 	text-align: center;
@@ -560,7 +491,7 @@
 	background-color: $redColor;
 	@include adaptiveValue("padding", 30, 15);
 	border-radius: 12px;
-	@include adaptiveValue("font-size", 48, 18);
+	@include adaptiveValue("font-size", 43, 18);
 	font-weight: bold;
 	color: #fff;
 	text-align: center;
@@ -608,13 +539,13 @@
 		}
 		// .text-section__title
 		&__title {
-			@include adaptiveValue("font-size", 72, 18);
+			@include adaptiveValue("font-size", 69, 18);
 			font-weight: bold;
 			margin-bottom: 30px;
 		}
 
 		p {
-			@include adaptiveValue("font-size", 40, 16);
+			@include adaptiveValue("font-size", 37, 16);
 			&:not(:last-child) {
 				margin-bottom: 25px;
 				@media (max-width:$mobile){
@@ -657,7 +588,7 @@
 		}
 		// .video__title
 		&__title {
-			@include adaptiveValue("font-size", 72, 18);
+			@include adaptiveValue("font-size", 69, 18);
 			font-weight: bold;
 			margin-bottom: 30px;
 		}
@@ -672,4 +603,62 @@
 }
 .center-text {
 	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//=======================================================================================================
+
+
+
+.card {
+	width: 100%;
+	height: 100%;
+	perspective: 1000px;
+}
+
+.card:hover .front {
+	transform: rotateX(180deg);
+}
+
+.card:hover .back {
+	transform: rotateX(0deg);
+}
+
+.front, .back {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+.front {
+	background-color: $greyColor;
+	@include adaptiveValue("font-size", 60, 22);
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: transform 0.6s;
+	padding: 10px;
+}
+
+.back {
+	background-color: $petrolColor;
+	padding: 20px 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: rotateX(180deg);
+	transition: transform 0.6s;
 }
