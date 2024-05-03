@@ -49,7 +49,7 @@ $containerPadding: 20;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Брейк-поїнти
-$pc: toEm($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$pc: toEm(1439.98); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
 $tablet: toEm(991.98); // Планшети, деякі телефони в горизонтальному положенні
 $mobile: toEm(767.98); // Телефони L
 $mobileSmall: toEm(479.98); // Телефони S
@@ -106,7 +106,13 @@ body {
 	max-width: 1710px;
 	margin: 0 auto;
 	@media (min-width:$mobile){
-		padding: 0 30px;
+		padding: 0 4vw;
+	}
+	@media (min-width:$tablet){
+		padding: 0 8vw;
+	}
+	@media (min-width:$pc){
+		padding: 0 12vw;
 	}
 	padding: 0 10px;
 }
@@ -114,7 +120,13 @@ body {
 	max-width: 1710px;
 	margin: 0 auto;
 	@media (min-width:$mobile){
-		padding: 0 30px;
+		padding: 0 4vw;
+	}
+	@media (min-width:$tablet){
+		padding: 0 8vw;
+	}
+	@media (min-width:$pc){
+		padding: 0 12vw;
 	}
 	padding: 0 10px;
 }
@@ -134,10 +146,9 @@ body {
 		}
 		@if ($containerPadding>0) {
 			@if ($maxWidthContainer>0) {
-				padding: 0 toRem(math.div($containerPadding, 2));
+				padding: 0;
 			} @else {
-				@include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
-				@include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
+				padding: 0;
 			}
 		}
 	}

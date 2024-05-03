@@ -28,6 +28,10 @@
 		order: 2;
 		flex: 0 0 50%;
 		position: relative;
+		@media (max-width:$mobile){
+			padding-bottom: 70%; 
+			background-color: #fff;
+		}
 
 		img {
 			position: absolute;
@@ -46,12 +50,11 @@
 		padding-top: 40px;
 		padding-bottom: 40px;
 		@include adaptiveValue("padding-top", 60, 40, 2, 1710, 768);
-		@include adaptiveValue("padding-left", 40, 20);
-		@include adaptiveValue("padding-right", 40, 20);
+		@include adaptiveValue("padding-left", 40, 15, 2, 1710, 768);
+		@include adaptiveValue("padding-right", 40, 15, 2, 1710, 768);
 		@include adaptiveValue("padding-bottom", 60, 40, 2, 1710, 768);
 		@media (max-width:$mobileSmall){
-			padding-top: 30px;
-			padding-bottom: 40px;
+			padding: 30px 15px 40px;
 		}
 		// .col-text__title
 		&__title {

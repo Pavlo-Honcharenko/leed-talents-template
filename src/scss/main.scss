@@ -1,7 +1,7 @@
 .header-indent {
 	display: block;
 	width: 100%;
-	@include adaptiveValue("height", 135, 45);
+	@include adaptiveValue("height", 120, 35);
 }
 
 .main {
@@ -26,6 +26,7 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		height: 85vh; 
+		padding-left: 0;
 		@include adaptiveValue("padding-top", 150, 100);
 		@include adaptiveValue("padding-bottom", 80, 50);
 		
@@ -43,7 +44,7 @@
 		opacity: 0;
 		transform: scale(0.95);
 		animation: fadeIn 1.5s ease-in forwards 0.5s;
-		@include adaptiveValue("margin-left", 70, 10);
+		@include adaptiveValue("margin-left", 40, 10);
 
 		span {
 			font-weight: bold;
@@ -71,7 +72,7 @@
   }
 }
 .main__title-join {
-	min-height: 60vh;
+	min-height: 60%;
 	color: #fff;
 	text-shadow: 2px 2px $redColor;
 }

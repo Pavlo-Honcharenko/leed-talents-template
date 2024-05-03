@@ -1,9 +1,19 @@
 .slider-section {
-	width: 100%;
+	width: 100vw;
 	@media (min-width:$mobile){
-		width: calc(100vw - 60px); 
+		width: 80vw; 
 	}
-	width: calc(100vw - 20px);
+	@media (min-width:$mobile){
+		width: 92vw; 
+	}
+	@media (min-width:$tablet){
+		width: 84vw; 
+	}
+	@media (min-width:$pc){
+		width: 76vw; 
+	}
+	width: calc(100vw - 10px);
+	margin: 0 -5px;
 
 		// .slider-section__container
 		&__container {
@@ -13,7 +23,7 @@
 			@include adaptiveValue("padding-bottom", 60, 40, 2, 1710, 768);
 
 			@media (max-width:$mobileSmall){
-				 padding: 20px 5px 30px; 
+				 padding: 20px 0 30px; 
 			}
 		}
 		// .slider-section__slider

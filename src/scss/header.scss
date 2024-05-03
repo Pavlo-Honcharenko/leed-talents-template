@@ -8,6 +8,8 @@
 		&__container {
 			padding-left: 15px;
 			padding-right: 15px;
+			@include adaptiveValue("padding-left", 45, 15, 2, 1710, 768);
+			@include adaptiveValue("padding-right", 40, 15, 2, 1710, 768);
 			@include adaptiveValue("padding-top", 13, 8);
 			@include adaptiveValue("padding-bottom", 13, 8);
 		}
@@ -15,7 +17,7 @@
 		&__logo {
 			z-index: 70;
 			img {
-				@include adaptiveValue("width", 310, 120);
+				@include adaptiveValue("width", 260, 120);
 				transition: all 0.3s ease 0s; 
 				@media (any-hover: hover) {
 					&:hover {
@@ -28,7 +30,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 60px;
+		gap: 20px;
 	}
 }
 
@@ -88,7 +90,7 @@
 	align-items: center;
 	flex-wrap: wrap;
 	font-size: 24px;
-	@include adaptiveValue("font-size", 35, 24, 2, 1710, 992);
+	@include adaptiveValue("font-size", 32, 24, 2, 1710, 992);
 	letter-spacing: -1px;
 	color: #FFF;
 	white-space: nowrap;
@@ -109,12 +111,16 @@
 }
 .menu-item {
 	position: relative;
-	@include adaptiveValue("margin-right", 50, 35, 2, 1710, 992);
+	margin-right: 35px;
 	padding: 10px 0;
 	@media (any-hover: hover) {
 		&:hover {
 			color: #fffffff5;
 		}
+	}
+
+	@media (max-width: 1100px){
+		margin-right: 28px;
 	}
 
 	@media (max-width:$tablet){
@@ -150,7 +156,7 @@
 	top: 100%;
 	left: 0;
 	width: max-content;
-   padding: 5px 40px 15px;
+   padding: 5px 40px 10px;
 	@include adaptiveValue("padding-right", 45, 20, 2, 1710, 992);
 	@include adaptiveValue("padding-left", 45, 20, 2, 1710, 992);
 	white-space: wrap;
